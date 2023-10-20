@@ -1,0 +1,15 @@
+name = "deadman-ping"
+main = "src/index.ts"
+compatibility_date = "2023-05-15"
+
+workers_dev = false
+
+routes = [
+	{ pattern = "ping.leodev.cloud/*", zone_name = "leodev.cloud" },
+]
+d1_databases = [
+	{ binding = "DB", database_name = "deadman-ping", database_id = "62453414-d0af-4f96-8648-2a72512d45f3" }
+]
+
+[triggers]
+crons = ["* * * * *"] # * * * * * = run every minute
